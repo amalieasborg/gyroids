@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Gyroid</title>
+</head>
+<body>
+<h1>Edit Gyroid</h1>
+<form action="/gyroid/<%= gyroid._id %>/update" method="POST">
+    <label>Name: <input type="text" name="name" value="<%= gyroid.name %>"></label><br>
+    <label>Colour: <input type="text" name="colour" value="<%= gyroid.colour %>"></label><br>
+    <button type="submit">Update Gyroid</button>
+</form>
+<a href="/">Back to list</a>
+</body>
+</html>

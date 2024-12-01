@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyroids</title>
+    <link rel="stylesheet" href="css/gyroidManager.css">
+</head>
+<body>
+<h1>Gyroid</h1>
+<a href="/new">Add New Gyroid</a>
+<ul>
+    <% gyroids.forEach(gyroid => { %>
+        <li><%= gyroid.name %> og <%= gyroid.colour %>
+            <form action="/gyroid/<%= gyroid._id %>/delete" method="POST" style="display:inline;">
+                <button type="submit">Delete</button>
+            </form>
+            <form action="/gyroid/<%= gyroid._id %>/update" method="GET" style="display:inline;">
+                <button type="submit">Update</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
+</body>
+</html>
